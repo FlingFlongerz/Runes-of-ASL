@@ -1,4 +1,4 @@
 extends Node
 
 
-var selected_element = ""
+var element_selected = ""

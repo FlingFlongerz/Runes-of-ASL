@@ -28,6 +28,7 @@ func _on_wind_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/select_element_spell.tscn")
 
 func _on_lightning_pressed() -> void:
+	print(Global.element_selected)
 	Global.element_selected = "Lightning"
 	player_selected = true
 	get_tree().change_scene_to_file("res://scenes/select_element_spell.tscn")

@@ -1,8 +1,91 @@
-[gd_scene load_steps=2 format=3 uid="uid://bya4pcjawyft8"]
+[gd_scene load_steps=3 format=3 uid="uid://bya4pcjawyft8"]
 
 [ext_resource type="Script" path="res://scripts/player_select_element.gd" id="1_oaeep"]
 
-[node name="PlayerUserinterface" type="Control"]
+[sub_resource type="LabelSettings" id="LabelSettings_3sra3"]
+font_size = 32
+outline_color = Color(0.789956, 0.726361, 0.468275, 1)
+
+[node name="Player_select_element" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_oaeep")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 82.0
+offset_right = 886.0
+offset_bottom = 219.0
+text = "Select element"
+label_settings = SubResource("LabelSettings_3sra3")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Fire" type="Button" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 274.0
+offset_right = 266.0
+offset_bottom = 367.0
+text = "Fire
+"
+
+[node name="Water" type="Button" parent="."]
+offset_left = 353.0
+offset_top = 272.0
+offset_right = 538.0
+offset_bottom = 365.0
+text = "Water"
+
+[node name="Earth" type="Button" parent="."]
+offset_left = 628.0
+offset_top = 273.0
+offset_right = 813.0
+offset_bottom = 366.0
+text = "Earth"
+
+[node name="Wind" type="Button" parent="."]
+offset_left = 888.0
+offset_top = 271.0
+offset_right = 1073.0
+offset_bottom = 364.0
+text = "Wind"
+
+[node name="Lightning" type="Button" parent="."]
+offset_left = 85.0
+offset_top = 429.0
+offset_right = 270.0
+offset_bottom = 522.0
+text = "Lightning"
+
+[node name="Nature" type="Button" parent="."]
+offset_left = 355.0
+offset_top = 429.0
+offset_right = 540.0
+offset_bottom = 522.0
+text = "Nature"
+
+[node name="Light" type="Button" parent="."]
+offset_left = 629.0
+offset_top = 429.0
+offset_right = 814.0
+offset_bottom = 522.0
+text = "Light"
+
+[node name="Dark" type="Button" parent="."]
+offset_left = 889.0
+offset_top = 425.0
+offset_right = 1074.0
+offset_bottom = 518.0
+text = "Dark"
+
+[connection signal="pressed" from="Fire" to="." method="_on_fire_pressed"]
+[connection signal="pressed" from="Water" to="." method="_on_water_pressed"]
+[connection signal="pressed" from="Earth" to="." method="_on_earth_pressed"]
+[connection signal="pressed" from="Wind" to="." method="_on_wind_pressed"]
+[connection signal="pressed" from="Lightning" to="." method="_on_lightning_pressed"]
+[connection signal="pressed" from="Nature" to="." method="_on_nature_pressed"]
+[connection signal="pressed" from="Light" to="." method="_on_light_pressed"]
+[connection signal="pressed" from="Dark" to="." method="_on_dark_pressed"]

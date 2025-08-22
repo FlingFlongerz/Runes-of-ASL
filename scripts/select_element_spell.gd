@@ -36,10 +36,16 @@ func _ready() -> void:
 
 
 func _on_button_pressed() -> void:
-	print("spell 1")
-
+	Global.spell_selected = button1.text
+	print(Global.spell_selected)
+	get_tree().change_scene_to_file("res://scenes/finger_spell_screen.tscn")
+	
 func _on_button_2_pressed() -> void:
-	print("spell 2")
+	Global.spell_selected = button2.text
+	print(Global.spell_selected)
+	get_tree().change_scene_to_file("res://scenes/finger_spell_screen.tscn")
 
 func _on_button_3_pressed() -> void:
-	print("spell 3")
+	Global.spell_selected = button3.text
+	print(Global.spell_selected)
+	get_tree().change_scene_to_file("res://scenes/finger_spell_screen.tscn")

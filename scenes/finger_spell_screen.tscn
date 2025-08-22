@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dhrnhavdswfp"]
+[gd_scene load_steps=2 format=3 uid="uid://dhrnhavdswfp"]
+
+[ext_resource type="Script" path="res://scripts/finger_spell_screen.gd" id="1_vc6ae"]
 
 [node name="FingerSpellScreen" type="Control"]
 layout_mode = 3
@@ -7,3 +9,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_vc6ae")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

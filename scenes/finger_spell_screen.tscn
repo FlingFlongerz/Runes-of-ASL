@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhrnhavdswfp"]
+[gd_scene load_steps=3 format=3 uid="uid://dhrnhavdswfp"]
 
 [ext_resource type="Script" path="res://scripts/finger_spell_screen.gd" id="1_vc6ae"]
+[ext_resource type="Theme" uid="uid://dysqgk2enfhv2" path="res://components/buttons/buttons_battlescreen.tres" id="2_u8vdv"]
 
 [node name="FingerSpellScreen" type="Control"]
 layout_mode = 3
@@ -12,8 +13,44 @@ grow_vertical = 2
 script = ExtResource("1_vc6ae")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_u8vdv")
+
+[node name="back_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 539.0
-offset_top = 374.0
-offset_right = 579.0
-offset_bottom = 414.0
+offset_left = 26.0
+offset_top = 22.0
+offset_right = 131.0
+offset_bottom = 75.0
+theme = ExtResource("2_u8vdv")
+text = "BACK"
+
+[node name="cast_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -168.5
+offset_top = -170.0
+offset_right = 168.5
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_u8vdv")
+text = "CAST"
+
+[connection signal="pressed" from="back_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="cast_button" to="." method="_on_cast_button_pressed"]

@@ -1,12 +1,52 @@
-[gd_scene load_steps=2 format=3 uid="uid://csodimk7014fa"]
+[gd_scene load_steps=4 format=3 uid="uid://csodimk7014fa"]
 
+[ext_resource type="Script" path="res://scripts/battlescreen.gd" id="1_5ip7d"]
 [ext_resource type="Theme" uid="uid://dysqgk2enfhv2" path="res://components/buttons/buttons_battlescreen.tres" id="1_qaxn6"]
+[ext_resource type="PackedScene" uid="uid://bya4pcjawyft8" path="res://scenes/player_select_element.tscn" id="3_o7jgt"]
 
 [node name="Battlescreen" type="Node2D"]
+script = ExtResource("1_5ip7d")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 42.0
-offset_top = 26.0
-offset_right = 162.0
-offset_bottom = 90.0
+[node name="Menu" type="Button" parent="."]
+offset_left = 18.0
+offset_top = 14.0
+offset_right = 98.0
+offset_bottom = 66.0
 theme = ExtResource("1_qaxn6")
+
+[node name="Player_hp" type="ProgressBar" parent="."]
+offset_left = 774.0
+offset_top = 544.0
+offset_right = 1126.0
+offset_bottom = 622.0
+value = 100.0
+
+[node name="Label" type="Label" parent="Player_hp"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = -33.0
+offset_right = 277.0
+offset_bottom = -5.0
+text = "YOUR HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Enemy_hp" type="ProgressBar" parent="."]
+offset_left = 130.0
+offset_top = 17.0
+offset_right = 482.0
+offset_bottom = 95.0
+value = 100.0
+
+[node name="Label" type="Label" parent="Enemy_hp"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 82.0
+offset_right = 265.0
+offset_bottom = 110.0
+text = "ENEMY HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player_select_element" parent="." instance=ExtResource("3_o7jgt")]
+visible = false

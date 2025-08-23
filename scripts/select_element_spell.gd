@@ -31,8 +31,7 @@ func _ready() -> void:
 		button1.text = spells[0]
 		button2.text = spells[1]
 		button3.text = spells[2]
-	else:
-		print("Unknown element: ", Global.element_selected)
+
 
 
 func _on_button_pressed() -> void:

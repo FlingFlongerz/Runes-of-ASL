@@ -2,15 +2,15 @@ extends Control
 
 
 @export var player_spell_activated = false
-@onready var is_spell_ready = false
 @export var player_selected = false
+@onready var select_spell = $"../SelectElementSpell"
 
-
-
+				
 func _on_fire_pressed() -> void:
 	Global.element_selected = "Fire"
 	player_selected = true
 	get_tree().change_scene_to_file("res://scenes/select_element_spell.tscn")
+	
 	
 func _on_water_pressed() -> void:
 	Global.element_selected = "Water"
@@ -48,6 +48,4 @@ func _on_dark_pressed() -> void:
 	player_selected = true
 	get_tree().change_scene_to_file("res://scenes/select_element_spell.tscn")
 	
-	
-
 	

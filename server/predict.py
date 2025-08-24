@@ -123,6 +123,7 @@ try:
             try:
                 msg = json.dumps({"top_prediction": last_label})
                 conn.sendall(msg.encode("utf-8") + b"\n")
+                print(f"➡️ Sent to Godot: {msg}")
             except BrokenPipeError:
                 print("❌ Godot disconnected")
                 conn.close()

@@ -1,36 +1,26 @@
 extends Node
 
-var client : StreamPeerTCP
-var connected = false
-
-# -------------------------
-# Change these if needed
-# -------------------------
-const HOST = "127.0.0.1"
-const PORT = 8765
+var client := StreamPeerTCP.new()
 
 func _ready():
-	client = StreamPeerTCP.new()
-	var err = client.connect_to_host(HOST, PORT)
-	if err == OK:
-		connected = true
-		print("✅ Connected to Python ASL TCP server")
+	print("🚀 Trying to connect...")
+	client.connect_to_host("127.0.0.1", 8765)
+
+	# Blocking-style loop
+	var attempts := 0
+	while client.get_status() == StreamPeerTCP.STATUS_CONNECTING and attempts < 50:
+		client.poll()
+		attempts += 1
+		await get_tree().create_timer(0.1).timeout
+
+	if client.get_status() == StreamPeerTCP.STATUS_CONNECTED:
+		print("✅ Connected!")
 	else:
-		print("❌ Could not connect:", err)
+		print("❌ Failed to connect, status =", client.get_status())
 
 func _process(_delta):
-	if connected:
-		var available_bytes = client.get_available_bytes()
-		if available_bytes > 0:
-			var msg = client.get_utf8_string(available_bytes)
-			# Split messages by newline (in case Python sends multiple JSON objects)
-			for line in msg.strip_edges().split("\n"):
-				if line == "":
-					continue
-				var parse_result = JSON.parse_string(line)
-				if parse_result.error == OK:
-					var data = parse_result.result
-					if typeof(data) == TYPE_DICTIONARY and data.has("top_prediction"):
-						print("Top prediction:", data["top_prediction"])
-				else:
-					print("⚠ JSON parse error:", parse_result.error_string)
+	if client.get_status() == StreamPeerTCP.STATUS_CONNECTED:
+		var available := client.get_available_bytes()
+		if available > 0:
+			var text := client.get_utf8_string(available)
+			print("📩 Received:", text)

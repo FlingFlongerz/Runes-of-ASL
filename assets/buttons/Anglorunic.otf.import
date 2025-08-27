@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dit7wdynyi70s"
-path="res://.godot/imported/Wizard.ttf-53feecb660fceec1d7664461afbbb1c0.fontdata"
+uid="uid://yhnmswrid8cn"
+path="res://.godot/imported/Anglorunic.otf-e213307d220f049be430dfa332f57831.fontdata"
 
 [deps]
 
-source_file="res://components/buttons/Wizard.ttf"
-dest_files=["res://.godot/imported/Wizard.ttf-53feecb660fceec1d7664461afbbb1c0.fontdata"]
+source_file="res://assets/buttons/Anglorunic.otf"
+dest_files=["res://.godot/imported/Anglorunic.otf-e213307d220f049be430dfa332f57831.fontdata"]
 
 [params]
 

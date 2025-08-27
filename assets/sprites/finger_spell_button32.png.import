@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bexvdsnsq2is6"
-path="res://.godot/imported/finger_spell_button31.png-a68377725fa7866a5715600c20be52ca.ctex"
+uid="uid://il3tfyd3foij"
+path="res://.godot/imported/finger_spell_button32.png-2e5608532d07841b7e7523da30476096.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://components/sprites/finger_spell_button31.png"
-dest_files=["res://.godot/imported/finger_spell_button31.png-a68377725fa7866a5715600c20be52ca.ctex"]
+source_file="res://assets/sprites/finger_spell_button32.png"
+dest_files=["res://.godot/imported/finger_spell_button32.png-2e5608532d07841b7e7523da30476096.ctex"]
 
 [params]
 

@@ -2,9 +2,9 @@ extends Control
 
 @onready var container = $CenterContainer/VBoxContainer
 @onready var sprites_dict = {
-	"res://components/sprites/finger_spell_button11.png": "res://components/sprites/finger_spell_button12.png",
-	"res://components/sprites/finger_spell_button21.png": "res://components/sprites/finger_spell_button22.png",
-	"res://components/sprites/finger_spell_button31.png": "res://components/sprites/finger_spell_button32.png",
+	"res://assets/sprites/finger_spell_button11.png": "res://assets/sprites/finger_spell_button12.png",
+	"res://assets/sprites/finger_spell_button21.png": "res://assets/sprites/finger_spell_button22.png",
+	"res://assets/sprites/finger_spell_button31.png": "res://assets/sprites/finger_spell_button32.png",
 }
 @onready var cast_butt = $cast_button
 
@@ -68,7 +68,7 @@ func _ready() -> void:
 		# Font scaling
 		var font_size := int(BTN_SIZE * 0.6)
 		btn.add_theme_font_size_override("font_size", font_size)
-		btn.add_theme_font_override("font", load("res://components/buttons/Anglorunic.otf"))
+		btn.add_theme_font_override("font", load("res://assets/buttons/Anglorunic.otf"))
 
 		# Text color
 		btn.add_theme_color_override("font_color", Color.WHITE)

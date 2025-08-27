@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://dhrnhavdswfp"]
 
 [ext_resource type="Script" path="res://scripts/finger_spell_screen.gd" id="1_vc6ae"]
-[ext_resource type="FontFile" uid="uid://yhnmswrid8cn" path="res://components/buttons/Anglorunic.otf" id="2_dhx6k"]
-[ext_resource type="Theme" uid="uid://dysqgk2enfhv2" path="res://components/buttons/buttons_battlescreen.tres" id="2_u8vdv"]
-[ext_resource type="Texture2D" uid="uid://c1ec2x0fykypl" path="res://components/sprites/522623138_1306074220959648_1910464055116017043_n.png" id="3_2pgin"]
-[ext_resource type="Texture2D" uid="uid://btnpotkv61d13" path="res://components/sprites/536207031_1307511064218888_471849972863910592_n.png" id="4_jk2p4"]
+[ext_resource type="FontFile" path="res://components/buttons/Anglorunic.otf" id="2_dhx6k"]
+[ext_resource type="Theme" path="res://components/buttons/buttons_battlescreen.tres" id="2_u8vdv"]
+[ext_resource type="Texture2D" path="res://components/sprites/522623138_1306074220959648_1910464055116017043_n.png" id="3_2pgin"]
+[ext_resource type="Texture2D" path="res://components/sprites/536207031_1307511064218888_471849972863910592_n.png" id="4_jk2p4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2f7od"]
 texture = ExtResource("3_2pgin")

@@ -1,11 +1,10 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dysqgk2enfhv2"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://c7naeqd2s6cie"]
 
 [ext_resource type="FontFile" uid="uid://yhnmswrid8cn" path="res://components/buttons/Anglorunic.otf" id="1_cnivg"]
 [ext_resource type="FontFile" uid="uid://dit7wdynyi70s" path="res://components/buttons/Wizard.ttf" id="1_sslgl"]
 
 [resource]
 default_font = ExtResource("1_sslgl")
-Button/colors/font_outline_color = Color(0, 0.963312, 0, 1)
-Button/colors/icon_hover_pressed_color = Color(0, 0.964706, 0, 1)
-Button/font_sizes/font_size = 40
+Button/colors/font_pressed_color = Color(0.556863, 0.937255, 0.592157, 1)
+Button/font_sizes/font_size = 48
 Button/fonts/font = ExtResource("1_cnivg")

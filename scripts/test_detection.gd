@@ -1,6 +1,7 @@
 extends Node
 
 var client := StreamPeerTCP.new()
+var received_messages := {}
 
 func _ready():
 	print("🚀 Trying to connect...")
@@ -23,4 +24,7 @@ func _process(_delta):
 		var available := client.get_available_bytes()
 		if available > 0:
 			var text := client.get_utf8_string(available)
-			print("📩 Received:", text)
+			if not received_messages.has(text):
+				print("📩 Received:", text)
+				received_messages.clear()
+				received_messages.get_or_add(text)

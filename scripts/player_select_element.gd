@@ -3,7 +3,7 @@ extends Control
 
 @export var player_spell_activated = false
 @export var player_selected = false
-@onready var select_spell = $"../SelectElementSpell"
+
 
 				
 func _on_fire_pressed() -> void:

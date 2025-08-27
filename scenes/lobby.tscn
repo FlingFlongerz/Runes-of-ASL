@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciw03jnnyiobt"]
+
+[ext_resource type="Script" path="res://scripts/lobby.gd" id="1_pj0i4"]
+
+[node name="Lobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pj0i4")
+
+[node name="bot_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 221.0
+offset_right = 628.0
+offset_bottom = 284.0
+text = "VS BOT"
+
+[node name="player_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 327.0
+offset_right = 630.0
+offset_bottom = 399.0
+text = "VS PLAYER"
+
+[connection signal="pressed" from="bot_button" to="." method="_on_bot_button_pressed"]

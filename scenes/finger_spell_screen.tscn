@@ -1,7 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhrnhavdswfp"]
+[gd_scene load_steps=9 format=3 uid="uid://dhrnhavdswfp"]
 
 [ext_resource type="Script" path="res://scripts/finger_spell_screen.gd" id="1_vc6ae"]
+[ext_resource type="FontFile" uid="uid://yhnmswrid8cn" path="res://components/buttons/Anglorunic.otf" id="2_dhx6k"]
 [ext_resource type="Theme" uid="uid://dysqgk2enfhv2" path="res://components/buttons/buttons_battlescreen.tres" id="2_u8vdv"]
+[ext_resource type="Texture2D" uid="uid://c1ec2x0fykypl" path="res://components/sprites/522623138_1306074220959648_1910464055116017043_n.png" id="3_2pgin"]
+[ext_resource type="Texture2D" uid="uid://btnpotkv61d13" path="res://components/sprites/536207031_1307511064218888_471849972863910592_n.png" id="4_jk2p4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2f7od"]
+texture = ExtResource("3_2pgin")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h2syb"]
+texture = ExtResource("4_jk2p4")
+
+[sub_resource type="Theme" id="Theme_386j5"]
+Button/fonts/font = ExtResource("2_dhx6k")
+Button/styles/normal = SubResource("StyleBoxTexture_2f7od")
+Button/styles/pressed = SubResource("StyleBoxTexture_h2syb")
 
 [node name="FingerSpellScreen" type="Control"]
 layout_mode = 3
@@ -12,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vc6ae")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -20,12 +34,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -20.0
-offset_top = -20.0
+offset_top = -85.0
 offset_right = 20.0
-offset_bottom = 20.0
+offset_bottom = -45.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_u8vdv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme = SubResource("Theme_386j5")
+alignment = 1
 
 [node name="back_button" type="Button" parent="."]
 layout_mode = 0
@@ -50,7 +68,8 @@ offset_bottom = -66.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_u8vdv")
+disabled = true
 text = "CAST"
 
-[connection signal="pressed" from="back_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="cast_button" to="." method="_on_cast_button_pressed"]

@@ -5,12 +5,12 @@ extends Control
 @onready var button3 = $Spell3
 
 var fire_elements = ["flame on", "fire exit", "inheat assault"]
-var water_elements = ["wave push", "slimy substance", "wet and wild"]
+var water_elements = ["eda", "slimy substance", "wet and wild"]
 var earth_elements = ["mountain dew", "bato dela rosa", "rock hard"]
 var air_elements = ["blow", "careless whisper", "every breath you take"]
 var nature_elements = ["outdoor", "touch grass", "morning wood"]
 var dark_elements = ["lights off", "black jack", "dark hole"]
-var electric_elements = ["electrolytes", "voltes five", "electric fan"]
+var lightning_elements = ["electrolytes", "voltes five", "electric fan"]
 var light_elements = ["flashback", "lights on", "light of glory"]
 
 # Map elements to their spells
@@ -22,7 +22,7 @@ var element_spells = {
 	"Nature": nature_elements,
 	"Dark": dark_elements,
 	"Light": light_elements,
-	"Electric": electric_elements
+	"Lightning": lightning_elements
 }
 
 func _ready() -> void:

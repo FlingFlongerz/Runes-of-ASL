@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwldk0on572ge"
-path="res://.godot/imported/hp_bar.png-3cb6f839fc909d97df55bb472a2d4828.ctex"
+uid="uid://b01feiidqo42y"
+path="res://.godot/imported/hp_bar_full.png-8afd99417aaf64fdb59a98b7ded617c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/buttons/player_asset/sprites/hp_bar.png"
-dest_files=["res://.godot/imported/hp_bar.png-3cb6f839fc909d97df55bb472a2d4828.ctex"]
+source_file="res://assets/buttons/player_asset/sprites/hp_bar_full.png"
+dest_files=["res://.godot/imported/hp_bar_full.png-8afd99417aaf64fdb59a98b7ded617c7.ctex"]
 
 [params]
 

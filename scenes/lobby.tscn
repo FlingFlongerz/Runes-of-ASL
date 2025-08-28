@@ -13,18 +13,18 @@ script = ExtResource("1_pj0i4")
 
 [node name="bot_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 470.0
-offset_top = 221.0
-offset_right = 628.0
-offset_bottom = 284.0
+offset_left = 909.0
+offset_top = 400.0
+offset_right = 1067.0
+offset_bottom = 463.0
 text = "VS BOT"
 
 [node name="player_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 470.0
-offset_top = 327.0
-offset_right = 630.0
-offset_bottom = 399.0
+offset_left = 909.0
+offset_top = 514.0
+offset_right = 1069.0
+offset_bottom = 586.0
 text = "VS PLAYER"
 
 [connection signal="pressed" from="bot_button" to="." method="_on_bot_button_pressed"]

@@ -1,21 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dhrnhavdswfp"]
+[gd_scene load_steps=3 format=3 uid="uid://dhrnhavdswfp"]
 
 [ext_resource type="Script" path="res://scripts/finger_spell_screen.gd" id="1_vc6ae"]
-[ext_resource type="FontFile" path="res://components/buttons/Anglorunic.otf" id="2_dhx6k"]
-[ext_resource type="Theme" path="res://components/buttons/buttons_battlescreen.tres" id="2_u8vdv"]
-[ext_resource type="Texture2D" path="res://components/sprites/522623138_1306074220959648_1910464055116017043_n.png" id="3_2pgin"]
-[ext_resource type="Texture2D" path="res://components/sprites/536207031_1307511064218888_471849972863910592_n.png" id="4_jk2p4"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2f7od"]
-texture = ExtResource("3_2pgin")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h2syb"]
-texture = ExtResource("4_jk2p4")
-
-[sub_resource type="Theme" id="Theme_386j5"]
-Button/fonts/font = ExtResource("2_dhx6k")
-Button/styles/normal = SubResource("StyleBoxTexture_2f7od")
-Button/styles/pressed = SubResource("StyleBoxTexture_h2syb")
+[ext_resource type="Theme" uid="uid://dysqgk2enfhv2" path="res://assets/buttons/buttons_battlescreen.tres" id="5_b2og6"]
 
 [node name="FingerSpellScreen" type="Control"]
 layout_mode = 3
@@ -42,7 +28,6 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
-theme = SubResource("Theme_386j5")
 alignment = 1
 
 [node name="back_button" type="Button" parent="."]
@@ -51,7 +36,7 @@ offset_left = 26.0
 offset_top = 22.0
 offset_right = 131.0
 offset_bottom = 75.0
-theme = ExtResource("2_u8vdv")
+theme = ExtResource("5_b2og6")
 text = "BACK"
 
 [node name="cast_button" type="Button" parent="."]
@@ -67,7 +52,7 @@ offset_right = 168.5
 offset_bottom = -66.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("2_u8vdv")
+theme = ExtResource("5_b2og6")
 disabled = true
 text = "CAST"
 

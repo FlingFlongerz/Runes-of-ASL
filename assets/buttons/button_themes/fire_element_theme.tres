@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c4r65f6v0segr"]
+
+[ext_resource type="Texture2D" uid="uid://bdqxgitxavkjr" path="res://assets/buttons/element_buttons/fire_button.png" id="1_gy76k"]
+[ext_resource type="FontFile" uid="uid://yhnmswrid8cn" path="res://assets/buttons/Anglorunic.otf" id="1_r00x2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_duwr6"]
+texture = ExtResource("1_gy76k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xoanf"]
+texture = ExtResource("1_gy76k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1dgia"]
+texture = ExtResource("1_gy76k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_612ia"]
+texture = ExtResource("1_gy76k")
+
+[resource]
+Button/font_sizes/font_size = 34
+Button/fonts/font = ExtResource("1_r00x2")
+Button/styles/focus = SubResource("StyleBoxTexture_duwr6")
+Button/styles/hover = SubResource("StyleBoxTexture_xoanf")
+Button/styles/normal = SubResource("StyleBoxTexture_1dgia")
+Button/styles/pressed = SubResource("StyleBoxTexture_612ia")

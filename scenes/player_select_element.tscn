@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bya4pcjawyft8"]
+[gd_scene load_steps=12 format=3 uid="uid://bya4pcjawyft8"]
 
 [ext_resource type="Script" path="res://scripts/player_select_element.gd" id="1_oaeep"]
+[ext_resource type="FontFile" uid="uid://dit7wdynyi70s" path="res://assets/buttons/Wizard.ttf" id="2_jhd2f"]
+[ext_resource type="Theme" uid="uid://c4r65f6v0segr" path="res://assets/buttons/button_themes/fire_element_theme.tres" id="2_mqjqe"]
+[ext_resource type="Theme" uid="uid://bh51vm44lfmjc" path="res://assets/buttons/button_themes/water_element_theme.tres" id="3_0fjs2"]
+[ext_resource type="Theme" uid="uid://didb8racm1jor" path="res://assets/buttons/button_themes/earth_element_theme.tres" id="4_wid7a"]
+[ext_resource type="Theme" uid="uid://ccx211ia2co1i" path="res://assets/buttons/button_themes/air_element_theme.tres" id="5_ugp25"]
+[ext_resource type="Theme" uid="uid://ccvbfk6nmchkg" path="res://assets/buttons/button_themes/lightning_element_theme.tres" id="6_2j6cl"]
+[ext_resource type="Theme" uid="uid://dn7iovuf0hv6i" path="res://assets/buttons/button_themes/nature_element_theme.tres" id="7_r4oln"]
+[ext_resource type="Theme" uid="uid://7t637l60m20w" path="res://assets/buttons/button_themes/light_element_theme.tres" id="8_exh1e"]
+[ext_resource type="Theme" uid="uid://5u0q0crcrd4b" path="res://assets/buttons/button_themes/dark_element_theme.tres" id="9_7pu2h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3sra3"]
-font_size = 32
-outline_color = Color(0.789956, 0.726361, 0.468275, 1)
+font = ExtResource("2_jhd2f")
+font_size = 80
 
 [node name="Player_select_element" type="Control"]
 layout_mode = 3
@@ -12,12 +21,19 @@ anchors_preset = 0
 script = ExtResource("1_oaeep")
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 251.0
-offset_top = 82.0
-offset_right = 886.0
-offset_bottom = 219.0
-text = "Select element"
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 616.0
+offset_top = 36.0
+offset_right = 1330.0
+offset_bottom = 195.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "SELECT ELEMENT"
 label_settings = SubResource("LabelSettings_3sra3")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -25,68 +41,84 @@ uppercase = true
 
 [node name="Fire" type="Button" parent="."]
 layout_mode = 0
-offset_left = 81.0
-offset_top = 274.0
-offset_right = 266.0
-offset_bottom = 367.0
+offset_left = 161.0
+offset_top = 257.0
+offset_right = 420.0
+offset_bottom = 533.0
+theme = ExtResource("2_mqjqe")
 text = "Fire
 "
+metadata/_edit_lock_ = true
 
 [node name="Water" type="Button" parent="."]
 layout_mode = 0
-offset_left = 353.0
-offset_top = 272.0
-offset_right = 538.0
-offset_bottom = 365.0
+offset_left = 618.0
+offset_top = 259.0
+offset_right = 877.0
+offset_bottom = 535.0
+theme = ExtResource("3_0fjs2")
 text = "Water"
+metadata/_edit_lock_ = true
 
 [node name="Earth" type="Button" parent="."]
 layout_mode = 0
-offset_left = 628.0
-offset_top = 273.0
-offset_right = 813.0
-offset_bottom = 366.0
+offset_left = 1064.0
+offset_top = 255.0
+offset_right = 1323.0
+offset_bottom = 531.0
+theme = ExtResource("4_wid7a")
 text = "Earth"
+metadata/_edit_lock_ = true
 
 [node name="Wind" type="Button" parent="."]
 layout_mode = 0
-offset_left = 888.0
-offset_top = 271.0
-offset_right = 1073.0
-offset_bottom = 364.0
-text = "Wind"
+offset_left = 1508.0
+offset_top = 253.0
+offset_right = 1767.0
+offset_bottom = 529.0
+theme = ExtResource("5_ugp25")
+text = "Air"
+metadata/_edit_lock_ = true
 
 [node name="Lightning" type="Button" parent="."]
 layout_mode = 0
-offset_left = 85.0
-offset_top = 429.0
-offset_right = 270.0
-offset_bottom = 522.0
+offset_left = 160.0
+offset_top = 643.0
+offset_right = 419.0
+offset_bottom = 919.0
+theme = ExtResource("6_2j6cl")
 text = "Lightning"
+metadata/_edit_lock_ = true
 
 [node name="Nature" type="Button" parent="."]
 layout_mode = 0
-offset_left = 355.0
-offset_top = 429.0
-offset_right = 540.0
-offset_bottom = 522.0
+offset_left = 620.0
+offset_top = 640.0
+offset_right = 879.0
+offset_bottom = 916.0
+theme = ExtResource("7_r4oln")
 text = "Nature"
+metadata/_edit_lock_ = true
 
 [node name="Light" type="Button" parent="."]
 layout_mode = 0
-offset_left = 629.0
-offset_top = 429.0
-offset_right = 814.0
-offset_bottom = 522.0
+offset_left = 1065.0
+offset_top = 640.0
+offset_right = 1324.0
+offset_bottom = 916.0
+theme = ExtResource("8_exh1e")
 text = "Light"
+metadata/_edit_lock_ = true
 
 [node name="Dark" type="Button" parent="."]
 layout_mode = 0
-offset_left = 889.0
-offset_top = 425.0
-offset_right = 1074.0
-offset_bottom = 518.0
+offset_left = 1508.0
+offset_top = 641.0
+offset_right = 1767.0
+offset_bottom = 917.0
+theme = ExtResource("9_7pu2h")
 text = "Dark"
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="Fire" to="." method="_on_fire_pressed"]
 [connection signal="pressed" from="Water" to="." method="_on_water_pressed"]

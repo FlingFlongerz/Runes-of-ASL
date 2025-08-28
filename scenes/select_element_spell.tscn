@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccnkplsv2e8qs"]
+[gd_scene load_steps=5 format=3 uid="uid://ccnkplsv2e8qs"]
 
 [ext_resource type="Script" path="res://scripts/select_element_spell.gd" id="1_2lsbq"]
+[ext_resource type="FontFile" uid="uid://dit7wdynyi70s" path="res://assets/buttons/Wizard.ttf" id="2_tquxb"]
+[ext_resource type="Theme" uid="uid://dysqgk2enfhv2" path="res://assets/buttons/buttons_battlescreen.tres" id="5_5f0b8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_foijm"]
+font = ExtResource("2_tquxb")
+font_size = 80
 
 [node name="SelectElementSpell" type="Control"]
 layout_mode = 3
@@ -11,35 +17,79 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2lsbq")
 
+[node name="LightningBg" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 510.0
-offset_top = 44.0
-offset_right = 649.0
-offset_bottom = 81.0
-text = "Choose your spell"
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -363.0
+offset_top = -400.0
+offset_right = 351.0
+offset_bottom = -241.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CHOOSe YOur SpElL"
+label_settings = SubResource("LabelSettings_foijm")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="Spell1" type="Button" parent="."]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 411.0
-offset_right = 351.0
-offset_bottom = 525.0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 404.0
+offset_top = -530.0
+offset_right = 708.0
+offset_bottom = -156.0
+grow_vertical = 0
+metadata/_edit_lock_ = true
 
 [node name="Spell2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 444.0
-offset_top = 410.0
-offset_right = 715.0
-offset_bottom = 524.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -530.0
+offset_right = 152.0
+offset_bottom = -156.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_lock_ = true
 
 [node name="Spell3" type="Button" parent="."]
-layout_mode = 0
-offset_left = 812.0
-offset_top = 413.0
-offset_right = 1083.0
-offset_bottom = 527.0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -708.0
+offset_top = -530.0
+offset_right = -404.0
+offset_bottom = -156.0
+grow_horizontal = 0
+grow_vertical = 0
+metadata/_edit_lock_ = true
+
+[node name="back_button" type="Button" parent="."]
+offset_left = 26.0
+offset_top = 22.0
+offset_right = 131.0
+offset_bottom = 75.0
+theme = ExtResource("5_5f0b8")
+text = "BACK"
 
 [connection signal="pressed" from="Spell1" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Spell2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Spell3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

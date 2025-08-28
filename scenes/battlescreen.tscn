@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://csodimk7014fa"]
+[gd_scene load_steps=3 format=3 uid="uid://csodimk7014fa"]
 
 [ext_resource type="Script" path="res://scripts/battlescreen.gd" id="1_5ip7d"]
-[ext_resource type="Theme" uid="uid://dysqgk2enfhv2" path="res://components/buttons/buttons_battlescreen.tres" id="1_qaxn6"]
 [ext_resource type="PackedScene" uid="uid://bya4pcjawyft8" path="res://scenes/player_select_element.tscn" id="3_o7jgt"]
 
 [node name="Battlescreen" type="Node2D"]
@@ -12,13 +11,13 @@ offset_left = 18.0
 offset_top = 14.0
 offset_right = 98.0
 offset_bottom = 66.0
-theme = ExtResource("1_qaxn6")
+text = "MENU"
 
 [node name="Player_hp" type="ProgressBar" parent="."]
-offset_left = 774.0
-offset_top = 544.0
-offset_right = 1126.0
-offset_bottom = 622.0
+offset_left = 1542.0
+offset_top = 970.0
+offset_right = 1894.0
+offset_bottom = 1048.0
 value = 100.0
 
 [node name="Label" type="Label" parent="Player_hp"]
@@ -49,4 +48,3 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Player_select_element" parent="." instance=ExtResource("3_o7jgt")]
-visible = false

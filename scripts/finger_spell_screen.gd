@@ -15,9 +15,6 @@ const BTN_SIZE := 220
 func _ready() -> void:
 	current_index = 0 # reset pointer every time scene loads
 	spell_buttons.clear()
-
-	cast_butt.disabled = true  # 🔒 disable cast at the start
-
 	var spell: String = Global.spell_selected
 	print("Loaded spell:", spell)
 

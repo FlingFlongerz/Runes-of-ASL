@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dn7iovuf0hv6i"]
+
+[ext_resource type="FontFile" uid="uid://yhnmswrid8cn" path="res://assets/buttons/Anglorunic.otf" id="1_r00x2"]
+[ext_resource type="Texture2D" uid="uid://b6axdp5q17f2d" path="res://assets/buttons/element_buttons/nature_button.png" id="2_vshk3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8vyse"]
+texture = ExtResource("2_vshk3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g44n4"]
+texture = ExtResource("2_vshk3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tdgk1"]
+texture = ExtResource("2_vshk3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qan4n"]
+texture = ExtResource("2_vshk3")
+
+[resource]
+Button/font_sizes/font_size = 34
+Button/fonts/font = ExtResource("1_r00x2")
+Button/styles/focus = SubResource("StyleBoxTexture_8vyse")
+Button/styles/hover = SubResource("StyleBoxTexture_g44n4")
+Button/styles/normal = SubResource("StyleBoxTexture_tdgk1")
+Button/styles/pressed = SubResource("StyleBoxTexture_qan4n")

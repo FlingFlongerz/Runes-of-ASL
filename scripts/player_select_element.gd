@@ -23,7 +23,7 @@ func _on_earth_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/select_element_spell.tscn")
 
 func _on_wind_pressed() -> void:
-	Global.element_selected = "Wind"
+	Global.element_selected = "Air"
 	player_selected = true
 	get_tree().change_scene_to_file("res://scenes/select_element_spell.tscn")
 

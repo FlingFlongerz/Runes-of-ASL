@@ -1,12 +1,24 @@
 extends Control
 
+@export var bot_button : Button
+@export var player_button : Button
 
-# Called when the node enters the scene tree for the first time.
+var lobby_buttons : Array
+
 func _ready() -> void:
-	pass # Replace with function body.
+	lobby_buttons = [
+		bot_button,
+		player_button
+	]
 
 
+func _process(delta: float) -> void:
+	Animationscript.update_control_scale(lobby_buttons)
 
 
 func _on_bot_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/battlescreen.tscn")
+
+
+func _on_back_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")

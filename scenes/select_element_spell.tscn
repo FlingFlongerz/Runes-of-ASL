@@ -1,8 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccnkplsv2e8qs"]
+[gd_scene load_steps=7 format=3 uid="uid://ccnkplsv2e8qs"]
 
 [ext_resource type="Script" path="res://scripts/select_element_spell.gd" id="1_2lsbq"]
+[ext_resource type="Shader" path="res://assets/shaders/MainMenu.gdshader" id="2_llsa6"]
 [ext_resource type="FontFile" uid="uid://dit7wdynyi70s" path="res://assets/buttons/Wizard.ttf" id="2_tquxb"]
 [ext_resource type="Theme" uid="uid://dysqgk2enfhv2" path="res://assets/buttons/buttons_battlescreen.tres" id="5_5f0b8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x3fwe"]
+shader = ExtResource("2_llsa6")
+shader_parameter/horizontalMovement = 0.9
+shader_parameter/verticalMovement = 0.1
+shader_parameter/frequencyStar = 0.05
+shader_parameter/sizeStar = 120.0
+shader_parameter/brightnessStar = 3.0
+shader_parameter/shineFrequencyStar = 8.0
+shader_parameter/transparencyStar = 0.11
+shader_parameter/starIterations = 3
+shader_parameter/frequencyBgStar = 0.996
+shader_parameter/shineFrequencyBgStar = 1.0
+shader_parameter/transparencyBgStar = 0.0
+shader_parameter/colorBackground = Color(0.0196078, 0.0784314, 0.117647, 0.796078)
+shader_parameter/transparencyBackground = 0.0
+shader_parameter/seed = 0.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_foijm"]
 font = ExtResource("2_tquxb")
@@ -17,8 +35,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2lsbq")
 
-[node name="LightningBg" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
+[node name="stars" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_x3fwe")
+offset_right = 1922.0
+offset_bottom = 1080.0
+color = Color(0.0862745, 0.0862745, 0.0862745, 0.607843)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

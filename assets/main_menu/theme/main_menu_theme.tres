@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://cxh355iop7c78"]
+
+[ext_resource type="FontFile" uid="uid://c1ov7b24lmh1r" path="res://assets/buttons/Playful Boxes.otf" id="1_gc0s3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqv8c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qscx3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v5jsd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u1pxw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_66qdp"]
+
+[resource]
+Button/font_sizes/font_size = 80
+Button/fonts/font = ExtResource("1_gc0s3")
+Button/styles/disabled = SubResource("StyleBoxEmpty_uqv8c")
+Button/styles/focus = SubResource("StyleBoxEmpty_qscx3")
+Button/styles/hover = SubResource("StyleBoxEmpty_v5jsd")
+Button/styles/normal = SubResource("StyleBoxEmpty_u1pxw")
+Button/styles/pressed = SubResource("StyleBoxEmpty_66qdp")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/font_sizes/font_size = 124
+Label/fonts/font = ExtResource("1_gc0s3")

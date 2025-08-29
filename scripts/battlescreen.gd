@@ -12,7 +12,7 @@ var ready_to_cast = true
 func _ready() -> void:
 	pass # Replace with function body.
 
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if ready_to_cast == true:
@@ -21,3 +21,6 @@ func _process(_delta: float) -> void:
 	
 	player_hp_bar.value = player_hp
 	enemy_hp_bar.value = enemy_hp
+
+func _on_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")

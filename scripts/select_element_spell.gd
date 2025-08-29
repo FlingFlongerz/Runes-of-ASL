@@ -4,6 +4,7 @@ extends Control
 @onready var button2 = $Spell2
 @onready var button3 = $Spell3
 
+
 @onready var elements_button = {
 	"Fire": preload("res://assets/buttons/button_themes/fire_element_theme.tres"),
 	"Water": preload("res://assets/buttons/button_themes/water_element_theme.tres"),
@@ -14,6 +15,9 @@ extends Control
 	"Light": preload("res://assets/buttons/button_themes/light_element_theme.tres"),
 	"Lightning": preload("res://assets/buttons/button_themes/lightning_element_theme.tres")
 }
+
+
+
 
 var fire_elements = ["flame on", "fire exit", "inheat assault"]
 var water_elements = ["eda", "slimy substance", "wet and wild"]
@@ -52,6 +56,10 @@ func _ready() -> void:
 		button2.text = spells[1]
 		button3.text = spells[2]
 
+func _process(delta: float) -> void:
+	Animationscript.update_control_scale(button1)
+	Animationscript.update_control_scale(button2)
+	Animationscript.update_control_scale(button3)
 
 func _on_button_pressed() -> void:
 	Global.spell_selected = button1.text

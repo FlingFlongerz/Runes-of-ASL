@@ -1,8 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciw03jnnyiobt"]
+[gd_scene load_steps=6 format=3 uid="uid://ciw03jnnyiobt"]
 
 [ext_resource type="Script" path="res://scripts/lobby.gd" id="1_pj0i4"]
+[ext_resource type="Theme" uid="uid://cxh355iop7c78" path="res://assets/main_menu/theme/main_menu_theme.tres" id="2_igc71"]
+[ext_resource type="Shader" path="res://assets/shaders/MainMenu.gdshader" id="2_luhhb"]
+[ext_resource type="Theme" uid="uid://dysqgk2enfhv2" path="res://assets/buttons/buttons_battlescreen.tres" id="4_m476q"]
 
-[node name="Lobby" type="Control"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kmioh"]
+shader = ExtResource("2_luhhb")
+shader_parameter/horizontalMovement = 0.9
+shader_parameter/verticalMovement = 0.1
+shader_parameter/frequencyStar = 0.05
+shader_parameter/sizeStar = 120.0
+shader_parameter/brightnessStar = 3.0
+shader_parameter/shineFrequencyStar = 8.0
+shader_parameter/transparencyStar = 0.11
+shader_parameter/starIterations = 3
+shader_parameter/frequencyBgStar = 0.996
+shader_parameter/shineFrequencyBgStar = 1.0
+shader_parameter/transparencyBgStar = 0.0
+shader_parameter/colorBackground = Color(0.0196078, 0.0784314, 0.117647, 0.796078)
+shader_parameter/transparencyBackground = 0.0
+shader_parameter/seed = 0.0
+
+[node name="Lobby" type="Control" node_paths=PackedStringArray("bot_button", "player_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,21 +30,54 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pj0i4")
+bot_button = NodePath("bot_button")
+player_button = NodePath("player_button")
+
+[node name="stars" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_kmioh")
+offset_right = 1922.0
+offset_bottom = 1080.0
+color = Color(0.0862745, 0.0862745, 0.0862745, 0.607843)
 
 [node name="bot_button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 874.0
-offset_top = 397.0
-offset_right = 1032.0
-offset_bottom = 460.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.0
+offset_top = -88.5
+offset_right = 79.0
+offset_bottom = -25.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_igc71")
 text = "VS BOT"
 
 [node name="player_button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 874.0
-offset_top = 506.0
-offset_right = 1034.0
-offset_bottom = 578.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 12.0
+offset_right = 80.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_igc71")
 text = "VS PLAYER"
 
+[node name="back_button" type="Button" parent="."]
+offset_left = 26.0
+offset_top = 22.0
+offset_right = 131.0
+offset_bottom = 75.0
+theme = ExtResource("4_m476q")
+text = "BACK"
+
 [connection signal="pressed" from="bot_button" to="." method="_on_bot_button_pressed"]
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

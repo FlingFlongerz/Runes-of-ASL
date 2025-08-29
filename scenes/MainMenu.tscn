@@ -1,9 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0uojybfrt8lp"]
+[gd_scene load_steps=9 format=3 uid="uid://d0uojybfrt8lp"]
 
 [ext_resource type="Script" path="res://scripts/main_screen.gd" id="1_8u6u3"]
 [ext_resource type="Texture2D" uid="uid://ec0xm8ybnx6g" path="res://assets/backgrounds/Lightning_bg.png" id="2_b8tqr"]
+[ext_resource type="Shader" path="res://assets/shaders/MainMenu.gdshader" id="2_ga3lw"]
+[ext_resource type="Shader" path="res://assets/shaders/nebula.gdshader" id="3_w0xew"]
+[ext_resource type="Theme" uid="uid://cxh355iop7c78" path="res://assets/main_menu/theme/main_menu_theme.tres" id="4_gse2p"]
 
-[node name="MainScreen" type="Control"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2hq8i"]
+shader = ExtResource("3_w0xew")
+shader_parameter/OCTAVE = 3
+shader_parameter/timescale = 1.0
+shader_parameter/CLOUD1_COL = Color(0.41, 0.64, 0.78, 0.4)
+shader_parameter/CLOUD2_COL = Color(0.99, 0.79, 0.46, 0.2)
+shader_parameter/CLOUD3_COL = Color(0.81, 0.31, 0.59, 1)
+shader_parameter/CLOUD4_COL = Color(0.27, 0.15, 0.33, 1)
+shader_parameter/SPACE = Color(0.09, 0.06, 0.28, 0.3)
+shader_parameter/zoomScale = 6.0
+shader_parameter/size = 10.0
+shader_parameter/starscale = 20.0
+shader_parameter/prob = 0.958
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t738v"]
+shader = ExtResource("2_ga3lw")
+shader_parameter/horizontalMovement = 0.9
+shader_parameter/verticalMovement = 0.1
+shader_parameter/frequencyStar = 0.05
+shader_parameter/sizeStar = 120.0
+shader_parameter/brightnessStar = 3.0
+shader_parameter/shineFrequencyStar = 8.0
+shader_parameter/transparencyStar = 0.11
+shader_parameter/starIterations = 3
+shader_parameter/frequencyBgStar = 0.996
+shader_parameter/shineFrequencyBgStar = 1.0
+shader_parameter/transparencyBgStar = 0.0
+shader_parameter/colorBackground = Color(0.0196078, 0.0784314, 0.117647, 0.796078)
+shader_parameter/transparencyBackground = 0.0
+shader_parameter/seed = 0.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ie5s"]
+font_size = 31
+
+[node name="MainScreen" type="Control" node_paths=PackedStringArray("play_button", "credits_button", "quit_button", "main_title", "team_name")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,24 +48,102 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8u6u3")
+play_button = NodePath("Play_button")
+credits_button = NodePath("credits_button")
+quit_button = NodePath("quit_button")
+main_title = NodePath("Title")
+team_name = NodePath("team_name")
+
+[node name="nebula" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_2hq8i")
+layout_mode = 0
+offset_right = 1927.0
+offset_bottom = 1069.0
+
+[node name="stars" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_t738v")
+layout_mode = 0
+offset_right = 1922.0
+offset_bottom = 1080.0
+color = Color(0.0862745, 0.0862745, 0.0862745, 0.607843)
 
 [node name="LightningBg" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.556863)
+self_modulate = Color(1, 1, 1, 0.807843)
 position = Vector2(960, 540)
 texture = ExtResource("2_b8tqr")
 
-[node name="Button" type="Button" parent="."]
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 88.0
+offset_right = 1506.0
+offset_bottom = 346.0
+theme = ExtResource("4_gse2p")
+text = "RUNE OF ASL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="team_name" type="Label" parent="."]
+offset_left = 1461.0
+offset_top = 850.0
+offset_right = 1780.0
+offset_bottom = 942.0
+theme = ExtResource("4_gse2p")
+text = "FLINGFLONGERZ"
+label_settings = SubResource("LabelSettings_8ie5s")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play_button" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -109.0
-offset_top = 8.0
-offset_right = 108.0
-offset_bottom = 128.0
+anchor_bottom = 0.505
+offset_left = -113.0
+offset_top = -55.0
+offset_right = 104.0
+offset_bottom = 59.6
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("4_gse2p")
 text = "play"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="credits_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.505
+offset_left = -175.5
+offset_top = 47.0
+offset_right = 166.5
+offset_bottom = 161.6
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_gse2p")
+text = "credits"
+
+[node name="quit_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.505
+offset_left = -113.0
+offset_top = 160.0
+offset_right = 104.0
+offset_bottom = 274.6
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_gse2p")
+text = "quit"
+
+[connection signal="pressed" from="Play_button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]

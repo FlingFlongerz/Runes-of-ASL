@@ -1,7 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhrnhavdswfp"]
+[gd_scene load_steps=5 format=3 uid="uid://dhrnhavdswfp"]
 
 [ext_resource type="Script" path="res://scripts/finger_spell_screen.gd" id="1_vc6ae"]
+[ext_resource type="Shader" path="res://assets/shaders/MainMenu.gdshader" id="2_8xj14"]
 [ext_resource type="Theme" uid="uid://dysqgk2enfhv2" path="res://assets/buttons/buttons_battlescreen.tres" id="5_b2og6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mpigb"]
+shader = ExtResource("2_8xj14")
+shader_parameter/horizontalMovement = 0.9
+shader_parameter/verticalMovement = 0.1
+shader_parameter/frequencyStar = 0.05
+shader_parameter/sizeStar = 120.0
+shader_parameter/brightnessStar = 3.0
+shader_parameter/shineFrequencyStar = 8.0
+shader_parameter/transparencyStar = 0.11
+shader_parameter/starIterations = 3
+shader_parameter/frequencyBgStar = 0.996
+shader_parameter/shineFrequencyBgStar = 1.0
+shader_parameter/transparencyBgStar = 0.0
+shader_parameter/colorBackground = Color(0.0196078, 0.0784314, 0.117647, 0.796078)
+shader_parameter/transparencyBackground = 0.0
+shader_parameter/seed = 0.0
 
 [node name="FingerSpellScreen" type="Control"]
 layout_mode = 3
@@ -11,6 +29,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vc6ae")
+
+[node name="stars" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_mpigb")
+offset_right = 1922.0
+offset_bottom = 1080.0
+color = Color(0.0862745, 0.0862745, 0.0862745, 0.607843)
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1

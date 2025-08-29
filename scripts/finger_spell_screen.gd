@@ -118,8 +118,16 @@ func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/select_element_spell.tscn")
 
 func _on_cast_button_pressed() -> void:
-	Global.enemy_health_points -= Global.spell_selected.replace(" ", "").length()
+	var enemyspellstats = Enemybot.enemy_attack()
+	var playerspellstats = {
+		"element" : Global.element_selected,
+		"spell" : Global.spell_selected,
+		"damage" : Global.spell_selected.replace(" ","").length()
+	}
+	print(enemyspellstats["damage"])
+	DamageMechanics.compare_elements(playerspellstats, enemyspellstats)
 	get_tree().change_scene_to_file("res://scenes/battlescreen.tscn")
+
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/select_element_spell.tscn")

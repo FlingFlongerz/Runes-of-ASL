@@ -53,7 +53,6 @@ offset_bottom = -66.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("5_b2og6")
-disabled = true
 text = "CAST"
 
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

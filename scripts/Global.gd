@@ -21,6 +21,7 @@ var player_health_points: int = 100
 # enemy hp
 var enemy_health_points: int = 100
 
+#------------------------------------------
 var client := StreamPeerTCP.new()
 var last_detected_letter: String = ""
 

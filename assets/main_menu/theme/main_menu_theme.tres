@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://cxh355iop7c78"]
 
-[ext_resource type="FontFile" uid="uid://c1ov7b24lmh1r" path="res://assets/buttons/Playful Boxes.otf" id="1_gc0s3"]
+[ext_resource type="FontFile" uid="uid://c1ov7b24lmh1r" path="res://assets/fonts/Playful Boxes.otf" id="1_gc0s3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uqv8c"]
 

@@ -11,14 +11,11 @@ func _ready() -> void:
 		player_button
 	]
 
-
 func _process(delta: float) -> void:
 	Animationscript.update_control_scale(lobby_buttons)
 
-
 func _on_bot_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/battlescreen.tscn")
-
+	get_tree().change_scene_to_file("res://scenes/world/battlescreen.tscn")
 
 func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")

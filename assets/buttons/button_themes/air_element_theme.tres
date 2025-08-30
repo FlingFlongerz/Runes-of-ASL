@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://ccx211ia2co1i"]
 
-[ext_resource type="FontFile" uid="uid://yhnmswrid8cn" path="res://assets/buttons/Anglorunic.otf" id="1_r00x2"]
+[ext_resource type="FontFile" uid="uid://yhnmswrid8cn" path="res://assets/fonts/Anglorunic.otf" id="1_r00x2"]
 [ext_resource type="Texture2D" uid="uid://cc1ardoqeutcn" path="res://assets/buttons/element_buttons/air_button.png" id="2_7fnuj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8vyse"]

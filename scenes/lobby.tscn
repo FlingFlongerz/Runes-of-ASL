@@ -35,6 +35,7 @@ player_button = NodePath("player_button")
 
 [node name="stars" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_kmioh")
+layout_mode = 0
 offset_right = 1922.0
 offset_bottom = 1080.0
 color = Color(0.0862745, 0.0862745, 0.0862745, 0.607843)
@@ -72,6 +73,7 @@ theme = ExtResource("2_igc71")
 text = "VS PLAYER"
 
 [node name="back_button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 26.0
 offset_top = 22.0
 offset_right = 131.0

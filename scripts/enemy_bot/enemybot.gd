@@ -1,5 +1,6 @@
 extends Node
 
+
 var fire_elements = ["flame on", "fire exit", "inheat assault"]
 var water_elements = ["eda", "slimy substance", "wet and wild"]
 var earth_elements = ["mountain dew", "bato dela rosa", "rock hard"]

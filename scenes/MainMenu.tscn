@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://d0uojybfrt8lp"]
 
-[ext_resource type="Script" path="res://scripts/main_screen.gd" id="1_8u6u3"]
+[ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_8u6u3"]
 [ext_resource type="Texture2D" uid="uid://ec0xm8ybnx6g" path="res://assets/backgrounds/Lightning_bg.png" id="2_b8tqr"]
 [ext_resource type="Shader" path="res://assets/shaders/MainMenu.gdshader" id="2_ga3lw"]
 [ext_resource type="Shader" path="res://assets/shaders/nebula.gdshader" id="3_w0xew"]
@@ -87,6 +87,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="team_name" type="Label" parent="."]
+layout_mode = 0
 offset_left = 1461.0
 offset_top = 850.0
 offset_right = 1780.0

@@ -17,10 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://scripts/globalscripts/Global.gd"
+Global="*res://scripts/managers/Global.gd"
 Enemybot="*res://scripts/enemy_bot/enemybot.gd"
-DamageMechanics="*res://scripts/globalscripts/damage_mechanics.gd"
-Animationscript="*res://scripts/globalscripts/animscript.gd"
+DamageManager="*res://scripts/managers/damage_manager.gd"
+Animationscript="*res://scripts/managers/animscript.gd"
+GameManager="*res://scripts/managers/game_manager.gd"
 
 [display]
 

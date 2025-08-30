@@ -1,0 +1,93 @@
+[gd_scene load_steps=10 format=3 uid="uid://csodimk7014fa"]
+
+[ext_resource type="Script" path="res://scripts/world/battlescreen.gd" id="1_fnysn"]
+[ext_resource type="Shader" path="res://assets/shaders/MainMenu.gdshader" id="2_3p22m"]
+[ext_resource type="Theme" uid="uid://cecljs1kmg3a2" path="res://assets/player_asset/theme/player_theme.tres" id="3_c1a8c"]
+[ext_resource type="Theme" uid="uid://cxh355iop7c78" path="res://assets/main_menu/theme/main_menu_theme.tres" id="4_bkj5n"]
+[ext_resource type="PackedScene" uid="uid://bya4pcjawyft8" path="res://scenes/main_scenes/player_select_element.tscn" id="5_r4mpd"]
+[ext_resource type="Theme" uid="uid://dysqgk2enfhv2" path="res://assets/buttons/buttons_battlescreen.tres" id="6_11hvj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gxnuc"]
+shader = ExtResource("2_3p22m")
+shader_parameter/horizontalMovement = 0.9
+shader_parameter/verticalMovement = 0.1
+shader_parameter/frequencyStar = 0.05
+shader_parameter/sizeStar = 120.0
+shader_parameter/brightnessStar = 3.0
+shader_parameter/shineFrequencyStar = 8.0
+shader_parameter/transparencyStar = 0.11
+shader_parameter/starIterations = 3
+shader_parameter/frequencyBgStar = 0.996
+shader_parameter/shineFrequencyBgStar = 1.0
+shader_parameter/transparencyBgStar = 0.0
+shader_parameter/colorBackground = Color(0.0196078, 0.0784314, 0.117647, 0.796078)
+shader_parameter/transparencyBackground = 0.0
+shader_parameter/seed = 0.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_r4gmu"]
+font_size = 34
+
+[sub_resource type="LabelSettings" id="LabelSettings_rhxvi"]
+font_size = 34
+
+[node name="Battlescreen" type="Node2D"]
+script = ExtResource("1_fnysn")
+
+[node name="stars" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_gxnuc")
+offset_right = 1922.0
+offset_bottom = 1080.0
+color = Color(0.0862745, 0.0862745, 0.0862745, 0.607843)
+
+[node name="Player_hp" type="ProgressBar" parent="."]
+offset_left = 1536.0
+offset_top = 840.0
+offset_right = 1888.0
+offset_bottom = 1169.0
+theme = ExtResource("3_c1a8c")
+value = 100.0
+
+[node name="Label" type="Label" parent="Player_hp"]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 86.0
+offset_right = 279.0
+offset_bottom = 123.0
+theme = ExtResource("4_bkj5n")
+text = "YOUR HP"
+label_settings = SubResource("LabelSettings_r4gmu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Enemy_hp" type="ProgressBar" parent="."]
+offset_left = 167.0
+offset_top = -107.0
+offset_right = 519.0
+offset_bottom = 222.0
+theme = ExtResource("3_c1a8c")
+value = 100.0
+
+[node name="Label" type="Label" parent="Enemy_hp"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 219.0
+offset_right = 280.0
+offset_bottom = 247.0
+theme = ExtResource("4_bkj5n")
+text = "ENEMY HP"
+label_settings = SubResource("LabelSettings_rhxvi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player_select_element" parent="." instance=ExtResource("5_r4mpd")]
+
+[node name="menu_button" type="Button" parent="."]
+offset_left = 26.0
+offset_top = 22.0
+offset_right = 131.0
+offset_bottom = 75.0
+theme = ExtResource("6_11hvj")
+text = "MENU
+"
+
+[connection signal="pressed" from="menu_button" to="." method="_on_menu_button_pressed"]

@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://bh51vm44lfmjc"]
 
-[ext_resource type="FontFile" uid="uid://yhnmswrid8cn" path="res://assets/buttons/Anglorunic.otf" id="1_r00x2"]
+[ext_resource type="FontFile" uid="uid://yhnmswrid8cn" path="res://assets/fonts/Anglorunic.otf" id="1_r00x2"]
 [ext_resource type="Texture2D" uid="uid://b571but2q3x5k" path="res://assets/buttons/element_buttons/water_button.png" id="2_vdgj2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8vyse"]

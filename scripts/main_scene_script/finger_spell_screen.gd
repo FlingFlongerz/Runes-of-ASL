@@ -67,7 +67,7 @@ func _ready() -> void:
 		# Font scaling
 		var font_size := int(BTN_SIZE * 0.6)
 		btn.add_theme_font_size_override("font_size", font_size)
-		btn.add_theme_font_override("font", load("res://assets/buttons/Anglorunic.otf"))
+		#btn.add_theme_font_override("font", load("res://assets/buttons/Anglorunic.otf"))
 
 		# Text color
 		btn.add_theme_color_override("font_color", Color.WHITE)

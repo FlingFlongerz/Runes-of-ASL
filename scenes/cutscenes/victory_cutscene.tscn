@@ -1,0 +1,416 @@
+[gd_scene load_steps=18 format=3 uid="uid://dn51uxs5h52n7"]
+
+[ext_resource type="Script" path="res://scripts/cutscenes_script/victory_cutscene.gd" id="1_tdvlf"]
+[ext_resource type="Texture2D" uid="uid://j61okaas6gkm" path="res://assets/sprites/animal_sprite/griffin.png" id="2_3uq2j"]
+[ext_resource type="Shader" path="res://assets/shaders/MainMenu.gdshader" id="2_hmmxx"]
+[ext_resource type="Texture2D" uid="uid://chtqpin7agio" path="res://assets/sprites/animal_sprite/capybara.png" id="3_m7w3n"]
+[ext_resource type="Texture2D" uid="uid://d4fifkfk0yexw" path="res://assets/sprites/animal_sprite/unicorn.png" id="4_y2xh1"]
+[ext_resource type="Texture2D" uid="uid://b362upm3e0sqq" path="res://assets/sprites/animal_sprite/electro.png" id="5_64sc0"]
+[ext_resource type="Texture2D" uid="uid://dpwciackdourk" path="res://assets/sprites/animal_sprite/panther.png" id="6_8neyp"]
+[ext_resource type="Texture2D" uid="uid://dk6ad13lvlfn2" path="res://assets/sprites/animal_sprite/praying_mantis.png" id="7_w1ip7"]
+[ext_resource type="Texture2D" uid="uid://dn4hfrvvr1gwi" path="res://assets/sprites/animal_sprite/whale.png" id="8_8bpdy"]
+[ext_resource type="Texture2D" uid="uid://xonl00py5aod" path="res://assets/sprites/animal_sprite/phoenix.png" id="9_nxs8l"]
+[ext_resource type="Theme" uid="uid://cxh355iop7c78" path="res://assets/main_menu/theme/main_menu_theme.tres" id="10_un851"]
+[ext_resource type="FontFile" uid="uid://i6l2to47vw8j" path="res://assets/fonts/RobloxFont-Regular.ttf" id="12_8nkag"]
+
+[sub_resource type="Animation" id="Animation_14t4h"]
+resource_name = "victory"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blackbar1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-39, -145), Vector2(-41, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blackbar2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-38, 1080), Vector2(-38, 940)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panther:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8, 2.21, 3.36667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-464, 1131), Vector2(284, 889), Vector2(424, 806)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PrayingMantis:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8, 2.21, 3.36667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-674, 526), Vector2(95, 390), Vector2(249, 482)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Unicorn:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.8, 2.21, 3.36667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2604, 890), Vector2(1699, 788), Vector2(1513, 764)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Whale:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.8, 2.21, 3.36667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2204, -430), Vector2(1237, 153), Vector2(1165, 267)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Griffin:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.8, 2.21, 3.36667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2455, 256), Vector2(1603, 337), Vector2(1516, 382)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Capybara:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.8, 2.2, 3.36667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2433, 732), Vector2(1738, 615), Vector2(1576, 567)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Electro:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.8, 2.2, 3.36667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(572, -284), Vector2(686, 192), Vector2(671, 336)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Phoenix:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.8, 2.19, 3.36667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(911, 1532), Vector2(1002, 780), Vector2(984, 591)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Label:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Label:label_settings:font_color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(2, 2.26667, 2.5, 2.73333, 2.96667, 3.13333, 3.33333, 3.53333, 3.76667, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 0.35, 0, 1), Color(1, 0.95, 0, 1), Color(0.6, 1, 0, 1), Color(0, 1, 0.633333, 1), Color(0, 1, 0.783333, 1), Color(0, 0.533333, 1, 1), Color(0, 0.0166669, 1, 1), Color(0.883333, 0, 1, 1), Color(1, 0, 0.816667, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kqcok"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blackbar1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-39, -145)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blackbar2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-38, 1080)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panther:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-464, 1131)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PrayingMantis:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-674, 526)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Unicorn:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-428, -179)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Whale:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2204, -430)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Griffin:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2455, 256)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Capybara:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2433, 732)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Electro:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2464, 1374)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Phoenix:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(911, 1532)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Label:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Label:label_settings:font_color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lkmuq"]
+_data = {
+"RESET": SubResource("Animation_kqcok"),
+"victory": SubResource("Animation_14t4h")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bl4p8"]
+shader = ExtResource("2_hmmxx")
+shader_parameter/horizontalMovement = 0.9
+shader_parameter/verticalMovement = 0.1
+shader_parameter/frequencyStar = 0.05
+shader_parameter/sizeStar = 120.0
+shader_parameter/brightnessStar = 3.0
+shader_parameter/shineFrequencyStar = 8.0
+shader_parameter/transparencyStar = 0.11
+shader_parameter/starIterations = 3
+shader_parameter/frequencyBgStar = 0.996
+shader_parameter/shineFrequencyBgStar = 1.0
+shader_parameter/transparencyBgStar = 0.0
+shader_parameter/colorBackground = Color(0.0196078, 0.0784314, 0.117647, 0.796078)
+shader_parameter/transparencyBackground = 0.0
+shader_parameter/seed = 0.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_51ufm"]
+font = ExtResource("12_8nkag")
+font_size = 300
+font_color = Color(1, 0, 0, 1)
+
+[node name="VictoryCutscene" type="Node2D" node_paths=PackedStringArray("anim_player")]
+script = ExtResource("1_tdvlf")
+anim_player = NodePath("AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lkmuq")
+}
+
+[node name="stars" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_bl4p8")
+offset_right = 1922.0
+offset_bottom = 1080.0
+color = Color(0.0862745, 0.0862745, 0.0862745, 0.607843)
+
+[node name="Griffin" type="Sprite2D" parent="."]
+position = Vector2(2455, 256)
+texture = ExtResource("2_3uq2j")
+
+[node name="Capybara" type="Sprite2D" parent="."]
+position = Vector2(2433, 732)
+texture = ExtResource("3_m7w3n")
+
+[node name="Unicorn" type="Sprite2D" parent="."]
+position = Vector2(-428, -179)
+texture = ExtResource("4_y2xh1")
+
+[node name="Electro" type="Sprite2D" parent="."]
+position = Vector2(2464, 1374)
+texture = ExtResource("5_64sc0")
+
+[node name="Panther" type="Sprite2D" parent="."]
+position = Vector2(-464, 1131)
+texture = ExtResource("6_8neyp")
+
+[node name="PrayingMantis" type="Sprite2D" parent="."]
+position = Vector2(-674, 526)
+texture = ExtResource("7_w1ip7")
+
+[node name="Whale" type="Sprite2D" parent="."]
+position = Vector2(2204, -430)
+texture = ExtResource("8_8bpdy")
+
+[node name="Phoenix" type="Sprite2D" parent="."]
+position = Vector2(911, 1532)
+texture = ExtResource("9_nxs8l")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 665.0
+offset_top = 520.0
+offset_right = 1292.0
+offset_bottom = 678.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_un851")
+text = "YOU WIN"
+label_settings = SubResource("LabelSettings_51ufm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="blackbar1" type="ColorRect" parent="."]
+offset_left = -41.0
+offset_right = 1958.0
+offset_bottom = 142.0
+color = Color(0, 0, 0, 1)
+
+[node name="blackbar2" type="ColorRect" parent="."]
+offset_left = -38.0
+offset_top = 940.0
+offset_right = 1961.0
+offset_bottom = 1082.0
+color = Color(0, 0, 0, 1)

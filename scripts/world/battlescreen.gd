@@ -21,6 +21,9 @@ func _process(_delta: float) -> void:
 	
 	player_hp_bar.value = player_hp
 	enemy_hp_bar.value = enemy_hp
+	
+	if enemy_hp <= 0:
+		get_tree().change_scene_to_file("res://scenes/cutscenes/victory_cutscene.tscn")
 
 func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
